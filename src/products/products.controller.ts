@@ -44,6 +44,7 @@ export default class ProductsController extends APIResponder {
         this.sendResponse(res,{
             id: p._id,
             title: p.title,
+            price:p.price,
             description:p.description,
             images:p.images,
             stock:p.stock,
@@ -68,6 +69,8 @@ export default class ProductsController extends APIResponder {
       list: p.map((item) => ({
         id: item._id,
         title: item.title,
+        images:item.images,
+        price:item.price
       })),
     });
   };
